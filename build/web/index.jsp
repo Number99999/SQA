@@ -59,6 +59,10 @@
                 color: #fff;
                 text-align: center;
                 padding: 20px;
+                bottom: 0;
+                position: absolute;
+                height: fit-content;
+                width: -webkit-fill-available;
             }
             
             footer p {
@@ -79,7 +83,7 @@
             <h1>Quản lý kho hàng</h1>
             <p>Chào mừng đến với ứng dụng quản lý kho hàng.</p>
         </main>
-        <footer>
+            <footer>
             <p>&copy; 2023, G5-N20.</p>
         </footer>
     </body>

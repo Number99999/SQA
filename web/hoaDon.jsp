@@ -140,7 +140,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <button type="submit"  formaction="/thucHanhJava/bills?ma=${hoadon.ma}">Hoàn tất</button>
+                <button type="submit"  formaction="/quanlimathang/bills?ma=${hoadon.ma}">Hoàn tất</button>
             </form>
         </div>
         <div style="margin-top: 10px">
