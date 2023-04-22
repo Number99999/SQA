@@ -35,16 +35,13 @@ public class ProductIOTest {
     @Test
     public void testGetProducts() {
         ArrayList<Product> products = ProductIO.getProducts();
-//        assertNotNull(products);
         assertEquals(false, products.isEmpty());
-//        assertTrue(products.size() > 0);
-//        assertEquals(true, !products.isEmpty());
+
     }
     
     @Test
     public void testGetProduct() {
         Product product = ProductIO.getProduct("P002");
-        //assertNotNull(product);
         assertEquals(false, product.equals(null));
         assertEquals("P002", product.getMa());
     }
@@ -52,7 +49,6 @@ public class ProductIOTest {
     @Test
     public void testExists() {
         boolean exists = ProductIO.exists("P001");
-        //assertTrue(exists);
         assertEquals(true, exists);
     }
     
@@ -67,7 +63,6 @@ public class ProductIOTest {
 
         ProductIO.insert(product);
         boolean exists = ProductIO.exists("DEF456");
-        //assertTrue(exists);
         assertEquals(true, exists);
     }
     
