@@ -41,7 +41,6 @@ public class HoaDonIOTest {
             pstmt.setString(1, hd.getMa());
             ResultSet rs = pstmt.executeQuery();
             assertEquals(true,rs.next());
-            //assertEquals(1, rs.getInt("count"));
         } catch (SQLException e) {
             e.printStackTrace();
             fail("Unexpected SQLException");
