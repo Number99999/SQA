@@ -15,9 +15,10 @@
             color: #fff;
             padding: 20px;
             text-align: center;
+            height: 18px;
         }
         h1 {
-            margin-top: 0;
+            margin-top: -10px;
         }
         table {
             border-collapse: collapse;
@@ -65,7 +66,7 @@
     </head>
     <body>
     <header>
-        <h1>Quản lý sản phẩm</h1>
+        <h1 >Quản lý sản phẩm</h1>
     </header>
     
     <div class="container">

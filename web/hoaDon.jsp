@@ -4,6 +4,16 @@
     <head>
         <title>Quản lý sản phẩm</title>
         <style type="text/css">
+            nav {
+                background-color: #333;
+                color: #fff;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px;
+                height: 18px;
+            }
+      
             table, th, td {
                 border: 1px solid #ccc;
             }
@@ -45,7 +55,7 @@
                 text-align: center;
             }
             h1 {
-                margin-top: 0;
+                margin: auto;
             }
             table {
                 border-collapse: collapse;
@@ -93,8 +103,11 @@
     </head>
 
     <body>
-        <h1>Tất cả sản phẩm</h1>
-        <h1>Hóa đơn</h1>
+        <nav>
+            <h1>Hóa đơn</h1>
+        </nav>
+      
+        
         <div class="container">
             <table id="table1" class="table">
                 <thead>
@@ -140,7 +153,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <button type="submit"  formaction="/quanlimathang/bills?ma=${hoadon.ma}">Hoàn tất</button>
+                <button class="button" type="submit"  formaction="/quanlimathang/bills?ma=${hoadon.ma}">Hoàn tất</button>
             </form>
         </div>
         <div style="margin-top: 10px">

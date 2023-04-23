@@ -40,6 +40,7 @@
                 font-weight: bold;
                 text-decoration: none;
                 margin-left: 30px;
+                height: 30px;
             }
             
             nav a:first-child {

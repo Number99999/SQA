@@ -7,8 +7,9 @@
         <style type="text/css">
         body {
             font-family: Arial, Helvetica, sans-serif;
-            margin: 0;
+            margin: 50px;
             padding: 0;
+            
         }
         header {
             background-color: #333;
@@ -61,8 +62,15 @@
             background-color: #d63028;
         }
         button{
-            background-color: #d63028;
-            color: #ffffff;
+            width: fit-content;
+            display: inline-block;
+            border-radius: 4px;
+            background-color: #f44336;
+            color: #fff;
+            text-align: center;
+            padding: 8px;
+            margin: 4px 2px;
+            cursor: pointer;
         }
     </style>
         

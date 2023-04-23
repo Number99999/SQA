@@ -16,11 +16,16 @@
             }
 
             header {
-                background-color: #007bff;
+                background-color: #333;
                 color: #fff;
-                padding: 10px;
+                padding: 20px;
+                text-align: center;
+                height: 18px;
             }
-
+            h1 {
+                margin: auto;
+                margin-top: -14px;
+            }
             main {
                 max-width: 600px;
                 margin: 0 auto;
@@ -96,15 +101,22 @@
                                 <button type="submit" formaction="edit?action=update&productCode=${ma}">Cap nhat</button>
                             </c:when>
                             <c:otherwise>
-                                <button type="submit" formaction="edit?action=create">Them mat hang</button>
+                                <button style="width: fit-content;display: inline-block;
+                                                border-radius: 4px;
+                                                background-color: #f44336;
+                                                color: #fff;
+                                                text-align: center;
+                                                padding: 8px;
+                                                margin: 4px 2px;
+                                                cursor: pointer;" type="submit" formaction="edit?action=create">Them mat hang</button>
                             </c:otherwise>
                         </c:choose>
                     </div>
                 </form>
             </main>
-            <footer>
+            <div style="text-align: center;">                        
                 <a class="button" href="${pageContext.request.contextPath}/products">Quan ly mat hang</a>
                 <a class="button" href="${pageContext.request.contextPath}/index.jsp">Trang chu</a>
-            </footer>
+            </div>
         </body>
     </html>

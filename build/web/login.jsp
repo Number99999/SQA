@@ -27,7 +27,7 @@
                     <input id="password" type="password" name="password" class="form__input" placeholder="Password" required>
                 </div>
                 <c:if test="${error != null}">
-                    <div style="color: #ea4c88">${error}</div>
+                    <div style="color: red">${error}</div>
                 </c:if>
                 <div class="form__field">
                     <input type="submit" value="Sign In">

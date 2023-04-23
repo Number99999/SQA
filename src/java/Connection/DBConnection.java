@@ -9,9 +9,9 @@ public class DBConnection {
             throws SQLException, ClassNotFoundException {
         
         Class.forName("com.mysql.jdbc.Driver");
-        String url ="jdbc:mysql://localhost:3306/ecomstore";
-        String user = "username";
-        String password ="password";
+        String url ="jdbc:mysql://localhost:3306/productdb";
+        String user = "root";
+        String password ="datkhi09";
                 
         Connection connection = DriverManager.getConnection(url, user, password);
         System.out.println("Connected to the Mysql server successfully.");
