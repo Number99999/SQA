@@ -24,6 +24,7 @@ public class HoaDonIOTest {
         conn = DBConnection.getConnection();
         conn.setAutoCommit(false);
         hd = new HoaDon("HD001", "San pham 1", "2023-04-03", "1000", "10", "Looai 1");
+        conn.commit();
     }
 
     @After

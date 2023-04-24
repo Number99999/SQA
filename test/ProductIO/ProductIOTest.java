@@ -4,7 +4,9 @@
  */
 package ProductIO;
 
+import Connection.DBConnection;
 import Product.Product;
+import java.sql.Connection;
 import java.util.ArrayList;
 import org.junit.After;
 import org.junit.Test;
@@ -16,7 +18,16 @@ import org.junit.Before;
  * @author david
  */
 public class ProductIOTest {
-    
+
+    private Connection conn;
+    private Product product;
+
+    @After
+    public void tearDown() throws Exception {
+        conn.rollback();
+        conn.close();
+    }
+
     public ProductIOTest() {
     }
 
@@ -24,12 +35,8 @@ public class ProductIOTest {
     public void setUp() throws Exception {
         // Khởi tạo các đối tượng cần thiết cho việc test
         // Nếu có thể, kết nối đến cơ sở dữ liệu thực và tạo các bản ghi tạm thời để test
-    }
-    
-    @After
-    public void tearDown() throws Exception {
-        // Giải phóng các tài nguyên được sử dụng trong quá trình test
-        // Nếu có thể, xóa các bản ghi tạm thời được tạo ra trong quá trình test
+        conn = DBConnection.getConnection();
+        conn.commit();
     }
 
     @Test
@@ -38,20 +45,20 @@ public class ProductIOTest {
         assertEquals(false, products.isEmpty());
 
     }
-    
+
     @Test
     public void testGetProduct() {
         Product product = ProductIO.getProduct("P002");
         assertEquals(false, product.equals(null));
         assertEquals("P002", product.getMa());
     }
-    
+
     @Test
     public void testExists() {
         boolean exists = ProductIO.exists("P001");
         assertEquals(true, exists);
     }
-    
+
     @Test
     public void testInsert() {
         Product product = new Product();
@@ -65,7 +72,7 @@ public class ProductIOTest {
         boolean exists = ProductIO.exists("DEF456");
         assertEquals(true, exists);
     }
-    
+
     @Test
     public void testUpdate() {
         Product product = new Product();
@@ -79,7 +86,7 @@ public class ProductIOTest {
         Product updatedProduct = ProductIO.getProduct("P002");
         assertEquals("Updated Product", updatedProduct.getTen());
     }
-    
+
     @Test
     public void testDelete() {
         ProductIO.delete("P003");
@@ -87,5 +94,4 @@ public class ProductIOTest {
         assertFalse(exists);
     }
 
-    
 }
